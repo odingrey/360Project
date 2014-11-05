@@ -1,0 +1,95 @@
+#bottom{
+	padding-top: 70px;
+}
+.info{
+	display: none;
+}
+.button{
+	cursor: default;
+}
+
+
+
+@charset "utf-8";
+
+footer { 
+	width:100%;
+	background:#111; 
+	background-size:cover;
+	background-color: black;
+	height:100px;
+	float:left;
+	position:absolute;
+}
+
+body {
+	background-image: url("/slowergram/media/default/sundevil.jpg");
+}
+
+.navbar-right img{
+	max-height: 20px;
+	width: auto;
+}
+
+.dropdown-menu a.icon {
+	position: relative;
+	padding-left; 40px;
+}
+.dropdown-menu a.icon .glyphicon {
+	top: 6px;
+	left: 10px;
+	font-size: 18px;
+}
+#bottom { color: #000000; font-family: Helvetica, sans-serif; }
+
+/*#top .imgava {width: 40px; height: 40px; }*/
+.page-footer{
+  display: inline-block; 
+  margin-top: 150px; 
+ } 
+  .page-footer {
+  font-size: 10px;
+  line-height: 16px; }
+  .page-footer nav, .page-footer p {
+    text-transform: uppercase;
+    font-weight: bold; }
+  .page-footer p {
+    color: #999999;
+    color: rgba(0, 0, 0, 0.3); }
+	
+.imgava {
+/*
+overflow: visible;
+/*padding-top: -50px;
+padding-bottom: 0; */
+}
+
+  
+  .page-footer {
+  position: center;
+  margin-top: 550px;
+  z-index: 20; }
+  
+  .page-footer {
+  clear: both;
+  overflow: hidden;
+  padding: 5px 0 7px;
+  border-top: 1px solid #dddddd;
+  background: #fff;
+  text-align: center; }
+  
+
+
+.page-footer nav, .page-footer nav ul, .page-footer .copyright {
+    margin: 0;
+    padding: 0; }
+  .page-footer nav, .page-footer .copyright, .page-footer li {
+    display: inline-block; }
+  .page-footer li {
+    margin: 0; }
+  .page-footer a {
+    display: block;
+    padding: 8px 6px; }
+  .page-footer .copyright {
+    padding: 8px 6px;
+    margin: 0 0 0 8px; }

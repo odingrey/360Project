@@ -1,0 +1,55 @@
+<script src="/slowergram/static/main.js"></script>
+<link rel="stylesheet" type="text/css" href="/slowergram/static/main.css">
+<script src='/slowergram/static/caman.full.min.js'></script>
+<script>
+Caman.DEBUG = true;
+</script>
+
+<div class='container'>
+	<ul class = "row">
+	{% for images in gallery %}
+		<li class="col-lg-3 col-md-2 col-sm-3 col-xs-6">
+			<a class='thumbnail image_thumb'>
+				<img class='image main_image' id = '{{ images.name }}'>
+			</a>
+		</li>
+		<script>
+			var d = new Date();
+			$( '#{{ images.name }}' ).attr('src', '{{ images.path }}?timestamp=' + d.getTime())
+		</script>
+	{% endfor %}
+	</ul>
+</div>
+<div id='upload_main'>
+<!--
+	<form class="dropzone" action="/slowergram/upload" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+	</form>
+
+-->
+
+	<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" linked='none'>
+		<div class="modal-dialog">
+			<div class="modal-content">         
+				<div class="modal-body"></div>
+				<div class='modal-footer'>
+					<div id='file-name'></div>
+					<div id="Filters">
+						<input id='brightness_slider' type="range" min="-100" max="100" value="0" onchange="update(this.value)" />
+					</div>
+ 					<button type='button' class='btn btn-primary pull-left' onclick="delete_image('{{ csrf_token }}')">Delete Image</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type='button' class='btn btn-primary' onclick="save_change('{{ csrf_token }}')">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<form id="submit_form" method="post" action="/slowergram/upload/" enctype="multipart/form-data">
+{{ form.as_p }}
+{% csrf_token %}
+<p><input type="submit" value="upload" /></p>
+</form>
+</div>
+

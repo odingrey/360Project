@@ -1,0 +1,5 @@
+<form id="submit_form" method="post" action="/slowergram/settings/" enctype="multipart/form-data">
+	{{ profile_form.as_p }}
+	{% csrf_token %}
+	<p><input type="submit" value="upload" /></p>
+</form>
