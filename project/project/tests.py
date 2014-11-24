@@ -7,6 +7,8 @@ from django.utils import unittest
 
 from form import UserRegistrationForm
 from form import UserProfile
+from selenium import webdriver
+from pyvirtualdisplay import Display
 from views import main
 from views import home
 from views import edit
@@ -231,3 +233,8 @@ class ExtraTests(TestCase):
 	def test_brightness_converter(self):
 		converted = helper.convert_brightness(50)
 		self.assertEqual(converted, 1)
+
+	def test_many_requests(self):
+		for i in xrange(0,100000):
+			response = resolve('/')
+			self.assertEqual(response.func, home)

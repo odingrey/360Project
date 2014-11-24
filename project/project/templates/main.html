@@ -38,7 +38,7 @@ Caman.DEBUG = true;
 						<input id='brightness_slider' type="range" min="-100" max="100" value="0" onchange="update(this.value)" />
 					</div>
  					<button type='button' class='btn btn-primary pull-left' onclick="delete_image('{{ csrf_token }}')">Delete Image</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" onclick="reset_slider()">Close</button>
 					<button type='button' class='btn btn-primary' onclick="save_change('{{ csrf_token }}')">Save changes</button>
 				</div>
 			</div>

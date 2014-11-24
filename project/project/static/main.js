@@ -32,16 +32,19 @@ function save_change(csrf){
 	});
 }
 function update(brightness){
-	var id = '#focused_image';	//TODO(mike): Rename this
+	var id = '#focused_image';
 	Caman(id, function () {
 		this.brightness(brightness);
 		this.render();
 	});
 }
 
+function reset_slider(){
+	var slider = document.getElementByID("brightness_slider");
+	slider.value = 0;
+}
 
 function delete_image(csrf){
-	var x;
 	var name = $('#imageModal').attr('image_id');
 	if (confirm("Are you sure you want to delete " + name) == true) {
 	        var src = $('#imageModal').attr('source');
